@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+
+        <title>TweetGap</title>
+
+        <link rel="stylesheet" type="text/css" href="lib/jquery.mobile/jquery.mobile-1.0a4.1.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/app.css" />
+
+        <script type="text/javascript" src="lib/jquery-1.5.2.min.js"></script>
+        <script type="text/javascript" src="phonegap.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+        <script type="text/javascript" src="lib/jquery.mobile/jquery.mobile-1.0a4.1.min.js"></script>
+    </head>
+    <body>
+        <div data-role="page" id="search-page">
+            <div data-role="header" data-backbtn="false">
+                <h1>TweetGap</h1>
+            </div>
+            <div data-role="content">
+                <form action="tweets.html">
+                    <div data-role="fieldcontain" style="text-align:center">
+                        <input type="search" name="search" id="search" value=""  />
+                        
+                        <!-- We do not use these, but you can try extend TweetGap to use geolocation -->
+                        <fieldset data-role="controlgroup" data-type="horizontal">
+                            <input type="radio" name="radio-tweets" id="radio-tweets-all" value="tweets-all" checked="checked" />
+                            <label for="radio-tweets-all">All Tweets</label>
+
+                            <input type="radio" name="radio-tweets" id="radio-tweets-nearby" value="tweets-nearby" />
+                            <label for="radio-tweets-nearby">Nearby</label>
+                        </fieldset>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

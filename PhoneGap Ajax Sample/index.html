@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PhoneGap Ajax Sample</title>
+		<script type="text/javascript" src="phonegap.js"></script>
+        <script type="text/javascript">
+			function appReady(){
+				var ajax = new XMLHttpRequest();
+				ajax.open("GET","http://search.twitter.com/search.json?q=bacon",true);
+				ajax.send();
+				
+				ajax.onreadystatechange=function(){
+					if(ajax.readyState==4 && (ajax.status==200||ajax.status==0)){
+						eval('var data = ' + ajax.responseText + ';');
+						var theResults = data.results;
+						var theHTML = '';
+						for(var i=0;i<theResults.length;i++){
+							theHTML += ['<div class="tweet"',
+											'<div class="avatar"> <img src='+theResults[i].profile_image_url+' /></div>',
+											'<div class="tweet_content">',
+												'<h2>'+theResults[i].from_user+'</h2>',
+												'<p>'+theResults[i].text+'</p>',
+											'</div>',
+										'</div>'].join('');
+						}
+						document.getElementById('main').innerHTML = theHTML;
+					}
+				}
+			}
+            document.addEventListener("deviceready", appReady, false);
+			
+        </script>
+		
+		<style type="text/css">
+			.tweet {padding-bottom:5px;}
+			.avatar {float: left; height: 48px; width: 48px;}
+			.tweet_content {margin-left: 60px; min-height: 48px;}
+		</style>
+    </head>
+	<body>
+		<div id="main">
+			
+		</div>
+	</body>
+</html>
+

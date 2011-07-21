@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns = "http://www.w3.org/ns/widgets"
+    xmlns:gap = "http://phonegap.com/ns/1.0"
+    id        = "com.phonegap.kitchensink"
+    version   = "0.1.0">
+
+    <name>Kitchen Sink</name>
+
+    <description>
+        PhoneGap Kitchen Sink Demo
+    </description>
+
+    <author href="http://michaelbrooks.ca" email="michael.brooks@nitobi.com">
+        Michael Brooks
+    </author>
+
+    <gap:platforms>
+        <gap:platform name="android" minVersion="2.1" />
+        <gap:platform name="blackberry" project="widgets"/>
+    </gap:platforms>
+
+    <icon src="icon.png" gap:role="default" />
+    <icon src="icon_hover.png" gap:role="default" hover="true" />
+
+</widget>

@@ -1,0 +1,24 @@
+#search-page {
+  background-image: url(../img/background.jpg);
+  background-repeat: no-repeat no-repeat;
+  background-position: bottom left;
+}
+
+/**
+ * Fix the icon alignment provided by jQuery Mobile
+ */
+
+#tweets-page li.ui-li-has-thumb {
+  padding-bottom: 0.1em;
+  padding-left: 75px;
+  padding-top: 0.1em;
+}
+
+#tweets-page li img {
+  left: 15px;
+  top: 15px;
+}
+
+#tweets-page li p {
+  white-space: normal;
+}

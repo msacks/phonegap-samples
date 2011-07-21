@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>PhoneGap Zepto and JSONP Sample</title>
+		<script type="text/javascript" src="phonegap.js"></script>
+	    <script type="text/javascript" src="zepto.js"></script>
+        <script type="text/javascript">
+             function appReady(){
+				$.ajax({
+					url:'http://nitobi.com/timkim/simplejsonp.php?callback=?',
+					success:function(data){
+											$('#main').html(data);
+										  }												
+					});
+             }
+             document.addEventListener("deviceready", appReady, false);
+        </script>
+    </head>
+<body>
+     <div id="main">
+     </div>
+</body>
+</html>

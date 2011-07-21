@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+
+        <title>TweetGap</title>
+
+        <link rel="stylesheet" type="text/css" href="lib/jquery.mobile/jquery.mobile-1.0a4.1.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/app.css" />
+
+        <script type="text/javascript" src="lib/jquery-1.5.2.min.js"></script>
+        <script type="text/javascript" src="phonegap.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+        <script type="text/javascript" src="lib/jquery.mobile/jquery.mobile-1.0a4.1.min.js"></script>
+    </head>
+    <body>
+        <div data-role="page" id="tweets-page">
+            <div data-role="header">
+                <h1>Tweets</h1>
+            </div>
+            <div data-role="content">
+                <ul data-role="listview">
+                    <!-- This content will be replaced after the Twitter API responds -->
+                    <li data-role="list-divider">Searching...</li>
+                </ul>
+            </div>
+
+            <!-- Template for the status bar -->
+            <script type="text/template" id="tweets-header-template">
+                <li data-role="list-divider">All "{{QUERY}}" tweets...</li>
+            </script>
+
+            <!-- Template for a single tweet -->
+            <script type="text/template" id="tweets-item-template">
+                <li>
+                    <img src="{{IMAGE}}" />
+                    <h3>{{USER}}</h3>
+                    <p>{{TEXT}}</p>
+                </li>
+            </script>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+.tweet {
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+.tweet .avatar img {
+  width: 37px;
+  height: 37px;
+}
+
+.tweet-content h1 {
+  font-size: 90%;
+  font-weight: bold;
+}
+.tweet-content p {
+  font-size: 60%;
+}
